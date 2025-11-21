@@ -1,0 +1,88 @@
+/* ====================================================
+   Harry.Zhang Actuarial Practice – Custom Theme Styles
+   This file customizes the Material for MkDocs theme.
+   ==================================================== */
+
+/* 1. Custom Color Palette (Tiffany Green) */
+:root {
+  /* Primary colors */
+  --md-primary-fg-color:        #0ABAB5;
+  --md-primary-fg-color--light: #5FD6D2;
+  --md-primary-fg-color--dark:  #067F7B;
+  /* Accent color */
+  --md-accent-fg-color:         #0ABAB5;
+}
+
+/* 2. Header Title Customization */
+.md-header__title {
+  /* Adjust margin based on the large logo width for alignment */
+  margin-left: 1 var(--md-logo-width, 200px) + 16px; 
+  /* Font styling */
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+}
+
+/* Hide the navigation title (the site name repeater in the sidebar) */
+.md-nav__title {
+  display: none;
+}
+
+/* 3. Large Custom Logo/Avatar Styling in Top-Left Corner */
+.md-logo img {
+  /* Dimensions (strictly kept as per original) */
+  height: 180px !important;    
+  width: 220px !important;
+  /* Visual styling */
+  border-radius: 14px !important;
+  object-fit: cover;
+  /* Border and shadow */
+  border: 4px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 4. Responsive Adjustments (Media Queries) */
+
+/* Screen size up to 960px */
+@media screen and (max-width: 960px) {
+  .md-logo img {
+    height: 130px !important;
+    width: 160px !important;
+  }
+}
+
+/* Screen size up to 600px */
+@media screen and (max-width: 600px) {
+  .md-logo img {
+    height: 100px !important;
+    width: 124px !important;
+  }
+  .md-header__title {
+    font-size: 1.35rem !important;
+  }
+}
+
+/* 5. Navigation Font Hierarchy (Strictly maintaining original sizes) */
+
+/* Level 1: Top categories (Introduction, Pricing, Banking) */
+.md-nav__item--nested > label.md-nav__link {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+
+/* Level 2: Sub-categories (Home Insurance Pricing, Motor Insurance Pricing) */
+.md-nav__item--nested > nav .md-nav__link {
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+}
+
+/* Level 3: Pages (Overview, Product, Data, Model) */
+.md-nav__link {
+  font-size: 0.5rem !important;
+  font-weight: 500 !important;
+}
+
+/* 6. Main Content Area Text Style */
+.page-text {
+  font-size: 1rem !important;
+  line-height: 1.5;
+}
