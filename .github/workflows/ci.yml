@@ -3,8 +3,7 @@ name: Deploy MkDocs Site
 on:
   push:
     branches:
-      - master  # 检查您的GitHub仓库，如果是main就改成 main
-    # 允许在GitHub页面手动运行此 workflow
+      - main
   workflow_dispatch:
     
 permissions:  # <-- 添加此部分
