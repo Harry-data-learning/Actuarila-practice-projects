@@ -3,11 +3,7 @@ name: Deploy MkDocs Site
 on:
   push:
     branches:
-<<<<<<< HEAD
       - main  
-=======
-      - main
->>>>>>> af6a316b7d6d43852938037129b2f69ca53ec2c1
   workflow_dispatch:
     
 permissions:  # <-- 添加此部分
