@@ -1,0 +1,44 @@
+# mkdocs.yml - Configuration for Harry.Zhang Actuarial Practice site
+
+site_name: Harry.Zhang Actuarial Practice
+
+theme:
+  name: material
+  logo: image/harry.jpg                     # Site logo in the top-left corner
+  features:
+    - navigation.expand                     # All sections expanded by default
+    - navigation.sections                   # Group pages into sections
+    - navigation.instant                    # Instant loading (SPA feel)
+    - search.highlight                      # Highlight search terms in results
+    - search.suggest                        # Show search suggestions
+  palette:
+    - scheme: default
+      primary: custom                       # Uses custom primary color from extra.css
+      accent: custom                        # Uses custom accent color from extra.css
+
+extra_css:
+  - stylesheets/extra.css                   # Additional custom styles
+
+nav:
+  - Introduction:
+      - About This Site: introduction/about.md
+      - How To Use:      introduction/usage.md
+
+  - Pricing:
+      - Home Insurance Pricing:
+          - Overview:  pricing/home/overview.md
+          - Product:   pricing/home/product.md
+          - Data:      pricing/home/data.md
+          - Model:     pricing/home/model.md
+      - Motor Insurance Pricing:
+          - Overview:  pricing/motor/overview.md
+          - Product:   pricing/motor/product.md
+          - Data:      pricing/motor/data.md
+          - Model:     pricing/motor/model.md
+
+  - Banking:
+      - Home Loan Default Prediction:
+          - Overview: banking/loan/overview.md
+          - Product:  banking/loan/product.md
+          - Data:     banking/loan/data.md
+          - Model:    banking/loan/model.md
